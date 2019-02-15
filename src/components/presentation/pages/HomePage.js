@@ -3,7 +3,7 @@ import Locale from '../../../utils/locale'
 
 const HomePage = () => (
   <div>
-    <h2>{ Locale.trans('WELCOME') }</h2>
+    <h2>{Locale.trans('WELCOME')}</h2>
     <p>Home Page</p>
   </div>
 )
