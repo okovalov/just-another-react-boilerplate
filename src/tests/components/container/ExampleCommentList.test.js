@@ -8,7 +8,7 @@ describe('ExampleCommentsList', () => {
     const wrapper = shallow(<ExampleCommentsList data={data} />)
     expect(wrapper).toMatchSnapshot()
   })
-  
+
   test('should render with empty message', () => {
     const wrapper = shallow(<ExampleCommentsList data={[]} />)
     expect(wrapper).toMatchSnapshot()

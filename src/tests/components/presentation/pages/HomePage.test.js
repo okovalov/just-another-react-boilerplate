@@ -8,4 +8,3 @@ describe('HomePage', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
-

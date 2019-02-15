@@ -1,5 +1,5 @@
 import { loadExampleComments } from '../../../store/api/loadData'
-import {API_CALL} from '../../../configs/api'
+import { API_CALL } from '../../../configs/api'
 import * as METHODS from '../../../constants/methods'
 import * as API_RESPONSE_NAMES from '../../../constants/apiResponseNames'
 import Url from '../../../utils/url'
@@ -21,9 +21,9 @@ describe('Store api - load data', () => {
         ]
       }
     }
-    
+
     const receivedActionPayload = loadExampleComments()
-    
+
     expect(receivedActionPayload).toEqual(expectedActionPayload)
   })
 })

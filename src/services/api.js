@@ -21,11 +21,12 @@ Api.interceptors.request.use(
 )
 
 Api.interceptors.response.use(
-  (response) => {
+  response => {
     return response
   },
-  (error) => {
+  error => {
     return Promise.reject(error.response)
-})
+  }
+)
 
 export default Api

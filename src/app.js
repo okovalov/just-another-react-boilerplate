@@ -16,9 +16,6 @@ const store = configureStore(history)
 
 /** Run application **/
 ReactDOM.render(
-  <Root
-    store={ store }
-    history={ history }
-  />,
+  <Root store={store} history={history} />,
   document.getElementById('app')
 )

@@ -5,7 +5,7 @@ const loading = (state = initialState, action) => {
   if (!action || !action.hasOwnProperty('type')) {
     return state
   }
-  
+
   switch (action.type) {
     case LOAD_ACTIONS.LOAD_REQUEST:
       return true

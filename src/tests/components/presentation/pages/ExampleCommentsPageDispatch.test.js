@@ -17,15 +17,17 @@ jest.mock('../../../../store/actions/exampleCommentActions', () => {
 
 describe('ExampleCommentPage container', () => {
   describe('mapping of props (actions)', () => {
-    let  mapDispatchToProps
-    
+    let mapDispatchToProps
+
     beforeEach(() => {
       let mockConnect = require('react-redux').connect
 
       mapDispatchToProps = mockConnect.mock.calls[0][1]
     })
 
-    afterEach(() => {jest.clearAllMocks()})
+    afterEach(() => {
+      jest.clearAllMocks()
+    })
 
     test('should map login props to login of LoginActions', () => {
       let mockLoginActions = require('../../../../store/actions/exampleCommentActions')
@@ -39,4 +41,3 @@ describe('ExampleCommentPage container', () => {
     })
   })
 })
-

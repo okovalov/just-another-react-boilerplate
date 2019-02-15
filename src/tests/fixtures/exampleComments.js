@@ -10,7 +10,7 @@ const comments = [
     name: 'Pet',
     body: 'body',
     email: 'pet@spot.com'
-  },
+  }
 ]
 
 export default comments

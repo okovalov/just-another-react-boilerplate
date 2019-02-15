@@ -1,7 +1,7 @@
 import { loadExampleComments } from '../../../store/actions/exampleCommentActions'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import {API_CALL} from '../../../configs/api'
+import { API_CALL } from '../../../configs/api'
 import * as METHODS from '../../../constants/methods'
 import * as API_RESPONSE_NAMES from '../../../constants/apiResponseNames'
 import Url from '../../../utils/url'
@@ -18,15 +18,18 @@ beforeEach(() => {
 
 describe('Store actions - example comments', () => {
   test('should return a proper action from store api', () => {
-    const data = {foo: 'bar'}
-    
+    const data = { foo: 'bar' }
+
     const expectedActions = [
       {
         type: API_CALL,
         data: {
           method: METHODS.GET,
           propertyNameToReturn: API_RESPONSE_NAMES.EXAMPLE_COMMENTS,
-          endpoint: Url.compose(API_ENDPOINTS.LOAD_EXAMPLE_COMMENTS, data),
+          endpoint: Url.compose(
+            API_ENDPOINTS.LOAD_EXAMPLE_COMMENTS,
+            data
+          ),
           types: [
             LOAD_ACTIONS.LOAD_REQUEST,
             LOAD_ACTIONS.LOAD_SUCCESS,
@@ -35,11 +38,10 @@ describe('Store actions - example comments', () => {
         }
       }
     ]
-    
+
     return store.dispatch(loadExampleComments(data)).then(() => {
       const actions = store.getActions()
       expect(actions).toEqual(expectedActions)
     })
   })
-  
 })

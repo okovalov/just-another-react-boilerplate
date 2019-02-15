@@ -5,7 +5,7 @@ import data from '../../fixtures/exampleComments'
 
 describe('ExampleComment', () => {
   test('should render correctly', () => {
-    const wrapper = shallow(<ExampleComment data = { data[0] } />)
+    const wrapper = shallow(<ExampleComment data={data[0]} />)
     expect(wrapper).toMatchSnapshot()
   })
 })

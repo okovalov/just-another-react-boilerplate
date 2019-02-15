@@ -1,14 +1,14 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Provider } from 'react-redux'
-import ExampleCommentsPageContainer  from '../../../../components/presentation/pages/ExampleCommentsPage'
+import ExampleCommentsPageContainer from '../../../../components/presentation/pages/ExampleCommentsPage'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
 const comments = [
-  {id:1, name: 'John', email: 'john@boo.com', body: 'yours'},
-  {id:2, name: 'John', email: 'john@boo.com', body: 'yours'},
-  {id:3, name: 'John', email: 'john@boo.com', body: 'yours'},
+  { id: 1, name: 'John', email: 'john@boo.com', body: 'yours' },
+  { id: 2, name: 'John', email: 'john@boo.com', body: 'yours' },
+  { id: 3, name: 'John', email: 'john@boo.com', body: 'yours' }
 ]
 
 const middlewares = [thunk]
@@ -26,10 +26,9 @@ describe('ExampleCommentsPage container', () => {
   test('render wrapped into provider with mocked store', () => {
     const wrapper = shallow(
       <Provider store={store}>
-        <ExampleCommentsPageContainer  />
+        <ExampleCommentsPageContainer />
       </Provider>
     )
     expect(wrapper).toMatchSnapshot()
   })
 })
-

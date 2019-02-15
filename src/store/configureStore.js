@@ -6,19 +6,12 @@ import rootReducer from './reducers'
 import apiMiddleware from './middleware/api'
 
 const configureStore = (history, initialState = {}) => {
-  
-  const middleware = [
-    thunk,
-    apiMiddleware,
-    routerMiddleware(history)
-  ]
-  
+  const middleware = [thunk, apiMiddleware, routerMiddleware(history)]
+
   return createStore(
     rootReducer,
     initialState,
-    composeWithDevTools(
-      applyMiddleware(...middleware)
-    )
+    composeWithDevTools(applyMiddleware(...middleware))
   )
 }
 
