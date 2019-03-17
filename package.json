@@ -37,6 +37,8 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-react-native": "^3.6.0",
     "file-loader": "^3.0.1",
     "jest": "^24.1.0",
     "mini-css-extract-plugin": "^0.5.0",
@@ -51,8 +53,8 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "axios": "^0.18.0",
+    "font-awesome": "^4.7.0",
     "history": "^4.7.2",
     "moment": "^2.24.0",
     "prop-types": "^15.6.2",

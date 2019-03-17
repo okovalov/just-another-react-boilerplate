@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import configureStore from './store/configureStore'
 import { createBrowserHistory } from 'history'
+import configureStore from './store/configureStore'
+
 import 'normalize.css/normalize.css'
 import Locale from './utils/locale'
 import './styles/styles.scss'
@@ -16,6 +17,6 @@ const store = configureStore(history)
 
 /** Run application **/
 ReactDOM.render(
-  <Root store={store} history={history} />,
-  document.getElementById('app')
+    <Root store={store} history={history} />,
+    document.getElementById('app')
 )
